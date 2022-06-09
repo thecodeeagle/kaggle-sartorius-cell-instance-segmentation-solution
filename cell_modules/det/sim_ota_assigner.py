@@ -10,10 +10,7 @@ from mmdet.core.bbox.builder import BBOX_ASSIGNERS
 from mmdet.core.bbox.assigners.assign_result import AssignResult
 from mmdet.core.bbox.assigners.base_assigner import BaseAssigner
 
-try:
-    import simota_cuda_ops
-except ModuleNotFoundError:
-    raise ModuleNotFoundError('Please compile SimOTA CUDA ops following README.')
+
 
 
 def bbox_overlaps(bboxes1, bboxes2, mode='iou', is_aligned=False, eps=1e-6):
